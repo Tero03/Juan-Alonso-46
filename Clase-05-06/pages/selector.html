@@ -34,7 +34,16 @@
     <label for="inputPassword" class="form-label mt-4">Password</label>
     <input type="password" id="inputPassword" placeholder="Ingrese su contraseña" class="form-control" aria-describedby="passwordHelpBlock" />
     <div class="d-grid gap-2">
-      <button type="button" onclick="buttonTest()" class="btn btn-outline-warning mt-3">Primary</button>
+      <button type="button" onclick="buttonTest()" class="btn btn-outline-warning mt-3">Ingresar</button>
+
+      <input type="number" id="array" placeholder="Ingrese la posicion del vector." class="form-control"/>
+      <button type="button" onclick="imprimirArray()" class="btn btn-outline-danger mt-3">Imprimir</button>
+
+      <label for="nombreFruta" class="form-label mt-4">Agregar frutas.</label>
+      <input type="text" id="nombreFruta" placeholder="Ingrese una fruta" class="form-control"/>
+      <button type="button" onclick="agregarFruta()" class="btn btn-outline-success mt-3">Agregar</button>
+      <button type="button" onclick="eliminarFruta()" class="btn btn-outline-dark mt-3">Eliminar</button>
+
     </div>
   </div>
 </body>

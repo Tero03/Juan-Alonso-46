@@ -4,9 +4,64 @@ let contador=0;
 const usuario = "admin";
 const contraseña = "123";
 
+let usuarios=[
+    {"usuario":"Oscar", "clave":"1234", "edad":"15"},
+    {"usuario":"admin", "clave":"4567", "edad":"20"},
+    {"usuario":"otro", "clave":"1111", "edad":"18"}
+]
+
 const frutas = [`Manzana`, `Pera`, `Sandia`];
 
-function buttonTest() {
+function pruebaBoton(){
+
+    let usuariosEdad=usuarios.map(usuario=>{
+
+        return{
+            ...usuario,
+            "edad":usuario.edad>=18 ? "Mayor de edad" : "Menor de edad"
+        }
+    });
+
+
+
+    console.log(usuariosEdad);
+
+     //let frutasMayus=frutas.map(fruta=>fruta.toUpperCase());
+   // console.log(frutasMayus);
+    
+}
+
+/*function pruebaBoton(){
+
+    let user = document.getElementById("inputUser").value;
+    let password = document.getElementById("inputPassword").value;
+
+    let buscarUsuario=usuarios.find(usuario=>usuario.usuario==user && usuario.clave==password );
+
+    console.log(buscarUsuario);
+}*/
+
+/*function pruebaBoton(){
+
+    let user = document.getElementById("inputUser").value.toLocaleUpperCase();
+    let password = document.getElementById("inputPassword").value;
+
+    let usuarioLogeado=usuarios.some(usuario=> usuario.usuario.toLocaleUpperCase()==user && usuario.clave==password);
+
+    if(usuarioLogeado){
+
+        setUser();
+        window.open('localStorage.html');
+
+    }else {
+        bloquearIntentos();
+        console.log(`Error de credenciales.`);
+    }
+
+
+}*/
+
+/*function buttonTest() {
 
     let user = document.getElementById("inputUser").value.toLocaleUpperCase();
     let password = document.getElementById("inputPassword").value;
@@ -26,7 +81,7 @@ function buttonTest() {
                 console.log(`Error de credenciales.`);
             }
     }
-}
+} */
 
 //bloquear el acceso
 function bloquearIntentos(){
